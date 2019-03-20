@@ -7,7 +7,7 @@ node {
     stage('clone a repo'){
         git "git@github.com:seedoffd/flask-examples.git"
     }
-   stage('Copy files'){
+    stage('Copy files'){
        sh 'scp * ec2-user@${IP}:/tmp/'
     }
     stage('Install requirements'){
